@@ -1,4 +1,4 @@
-"use-server"
+"use server"
 //import {clerkClient} from "@clerk/nextjs/server"
 import { clerkClient } from "@clerk/clerk-sdk-node";
 import {google} from "googleapis"
