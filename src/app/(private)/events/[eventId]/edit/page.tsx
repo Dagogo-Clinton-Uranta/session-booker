@@ -8,26 +8,18 @@ import { notFound } from "next/navigation";
 
 export const  revalidate = 0
 
-type PageProps = Promise<{
-    params: {
-      eventId: string;
-    };
-  }>;
-
-
 export default  async function EditEventPage(
     {
- params:{eventId},
+ params:{eventId}
 }: 
-PageProps
-/*{
+{
     params:{eventId:string}
-}*/
+}
 
 
 ){
 
-    const {userId,redirectToSignIn} = await auth()
+    const {userId,redirectToSignIn} = auth()
 
     if(userId === null){ return redirectToSignIn()}
 
