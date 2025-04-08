@@ -7,7 +7,7 @@ import { auth } from "@clerk/nextjs/server";
 export const revalidate = 0  
 
 export default async function SchedulePage(){
-  const {userId,redirectToSignIn} = auth()
+  const {userId,redirectToSignIn} = await auth()
 
 if(userId === null){
     return redirectToSignIn()
