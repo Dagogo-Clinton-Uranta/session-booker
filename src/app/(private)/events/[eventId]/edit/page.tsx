@@ -8,17 +8,16 @@ import { notFound } from "next/navigation";
 
 export const  revalidate = 0
 
-interface PageProps {
-  params: {
-    eventId: string;
-  };
-}
-
+type PageProps = Promise<{
+    params: {
+      eventId: string;
+    };
+  }>;
 
 
 export default  async function EditEventPage(
     {
- params:{eventId}
+ params:{eventId},
 }: 
 PageProps
 /*{
